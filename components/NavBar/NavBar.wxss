@@ -1,0 +1,23 @@
+.navbar-custom-class {
+    width: 750rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar-title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 750rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.navbar-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150rpx;
+}

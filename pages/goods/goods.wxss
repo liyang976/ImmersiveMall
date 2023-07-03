@@ -1,0 +1,191 @@
+.goods {
+    background-color: #efefef;
+    padding-bottom: 45px;
+}
+
+.goodsImg {
+    width: 750rpx;
+    height: 750rpx;
+}
+
+.goodsImg image {
+    width: 100%;
+    height: 100%;
+}
+
+.service-policy {
+    width: 750rpx;
+    height: 70rpx;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.service-policy .item {
+    color: #666;
+    font-size: 14px;
+}
+
+.goods-info {
+    background-color: #fff;
+}
+
+.goods-info .price {
+    color: #ff6700;
+    font-size: 45rpx;
+    font-weight: bold;
+    padding: 10rpx 15rpx;
+}
+
+.goods-info .name {
+    font-weight: bold;
+    margin: 5px 10px;
+    font-size: 35rpx;
+}
+
+.goods-info .brief {
+    margin: 0 10px;
+    color: #666;
+    font-size: 27rpx;
+}
+
+.attr .attr-value {
+    margin: 5px 10px;
+    color: #666;
+    font-size: 27rpx;
+}
+
+.attr-value .num {
+    display: inline-block;
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5rpx;
+}
+
+.comment {
+    margin-top: 25rpx;
+    background-color: #fff;
+}
+
+.comment-header {
+    display: flex;
+    margin-left: 15rpx;
+    margin-top: 15rpx;
+    align-items: center;
+    padding: 10rpx 0;
+}
+
+.comment-header .left .avatar {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.comment-header .right {
+    margin-left: 15rpx;
+    color: #666;
+    font-size: 28rpx;
+}
+
+.comment-item .comment-content {
+    font-size: 30rpx;
+    color: #666;
+    margin-left: 15rpx;
+}
+
+.buy-btn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 750rpx;
+    height: 100rpx;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.buy-btn .icon-item {
+    width: 115rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-btn .icon-item text {
+    font-size: 13px;
+    color: #666;
+}
+
+.buy-btn .cart-buy {
+    display: flex;
+    margin-left: 25rpx;
+}
+
+.buy-btn .cart-buy .cart {
+    width: 120px;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #fdcf00;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.buy-btn .cart-buy .buy {
+    width: 120px;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #fff;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fe3f00;
+}
+
+.pop-box .prod-img {
+    width: 280rpx;
+    height: 280rpx;
+}
+
+.pop-box .header {
+    display: flex;
+}
+
+.pop-box .header .chooseInfo {
+    padding: 20rpx;
+}
+
+.header .chooseInfo .prod-price {
+    color: orangered;
+}
+
+.header .chooseInfo .cInfo {
+    color: #666;
+    font-size: 26rpx;
+}
+
+.pop-box {
+    height: 650rpx;
+}
+
+.chooseItem {
+    margin-left: 20rpx;
+}
+
+.chooseTitle {
+    font-size: 26rpx;
+}
+
+.chooseBtns .van-button {
+    width: auto;
+    margin: 8rpx 10rpx;
+}

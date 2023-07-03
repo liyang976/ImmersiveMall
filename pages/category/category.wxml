@@ -1,0 +1,39 @@
+<view class="cateMain">
+  <nav-bar navTitle="分类"></nav-bar>
+
+  <!--占位-->
+  <view class="fixTop" style="height: {{navHeight}}px"></view>
+
+<!--搜索-->
+<van-search
+  value="{{ value }}"
+  input-align="center"
+  placeholder="请输入搜索关键词"
+/>
+
+<view class="treeSelect">
+    <van-tree-select
+  items="{{ categoryListName }}"
+  height="100%"
+  main-active-index="{{ mainActiveIndex }}"
+  active-id="{{ activeId }}"
+  bind:click-nav="onClickNav"
+  bind:click-item="onClickItem"
+>
+  <view class="content" slot="content">
+    <image class="banner" src="{{currentCategory.wap_banner_url}}"  />
+    <view class="desc">{{currentCategory.front_desc}}</view>
+    <view class="content-title">{{currentCategory.name}}</view>
+    <van-grid border="{{false}}" icon-size="50">
+      <van-grid-item 
+        wx:for="{{currentCategory.subCategoryList}}"
+        wx:key="id" icon="{{item.wap_banner_url}}"
+        text="{{item.name}}"
+        url="/pages/catelog/catelog?id={{item.id}}&parent_id={{item.parent_id}}"
+         />
+    </van-grid>
+  </view>
+
+</van-tree-select>
+</view>
+</view>

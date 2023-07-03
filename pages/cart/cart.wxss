@@ -1,0 +1,5 @@
+.check {
+    position: absolute;
+    right: 10rpx;
+    top: 50rpx;
+}

@@ -1,0 +1,33 @@
+<view class="catelog">
+    <nav-bar navTitle="产品列表"></nav-bar>
+     <!--占位-->
+    <view class="fixTop" style="height: {{navHeight}}px"></view>
+
+    <!--tab栏-->
+    <van-tabs bind:change="onChange" active="{{ active }}">
+        <van-tab wx:for="{{categoryList}}" title="{{item.name}}" wx:key="id">
+            <view class="desction">
+                <view class="title">{{item.front_name}}</view>
+                <view class="desc">{{item.front_desc}}</view>
+            </view>
+           <view class="goods">
+            <van-grid column-num="2" border="{{ false }}">
+            <van-grid-item use-slot 
+                wx:for="{{ goodsList }}" 
+                wx:for-item="goods" 
+                wx:key="id"
+                url="/pages/goods/goods?id={{goods.id}}"
+                >
+                <image
+                style="width: 100%; height: 90px;"
+                src="{{goods.list_pic_url}}"
+                />
+                <view class="goods-title">{{goods.name}}</view>
+                <view class="goods-price">¥ {{goods.retail_price}}</view>
+            </van-grid-item>
+            </van-grid>
+           </view>
+        </van-tab>
+    </van-tabs>
+
+</view>

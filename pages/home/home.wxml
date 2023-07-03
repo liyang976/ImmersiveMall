@@ -1,0 +1,57 @@
+<!-- <nav-bar navTitle="沉浸式商城"></nav-bar> -->
+
+<!--轮播图-->
+<swiper indicator-dots="{{true}}" autoplay="{{true}}">
+    <swiper-item wx:for="{{banner}}" wx:key="id">
+        <image src="{{item.image_url}}"></image>
+    </swiper-item>
+</swiper>
+
+<scroll-view class="main" scroll-y="{{true}}">
+    <van-grid column-num="5" border="{{ false }}">
+    <van-grid-item use-slot wx:for="{{ channels }}" wx:key="id" url="{{item.url}}">
+        <image
+        src="{{item.icon_url}}"
+        class="icon-image"
+        />
+        <text class="icon-text">{{item.name}}</text>
+    </van-grid-item>
+    </van-grid>
+
+    <!--榜单商品-->
+    <view class="shoping_title">榜单商品</view>
+    <van-grid column-num="3" border="{{ false }}">
+    <van-grid-item use-slot wx:for="{{ topicList }}" wx:key="id" url="{{item.url}}">
+        <image
+        src="{{item.item_pic_url}}"
+        class="top-image"
+        />
+        <text class="top-text">{{item.title}}</text>
+    </van-grid-item>
+    </van-grid>
+
+    <!--新品推荐-->
+    <view class="shoping_title">新品推荐</view>
+    <van-grid column-num="4" border="{{ false }}">
+    <van-grid-item use-slot wx:for="{{ newGoodsList }}" wx:key="id">
+        <image
+        src="{{item.list_pic_url}}"
+        class="new-image"
+        />
+        <text class="new-text">{{item.name}}</text>
+    </van-grid-item>
+    </van-grid>
+
+    <block wx:for="{{ categoryList }}" wx:key="id" wx:for-item="category">
+        <view class="shoping_title">{{category.name}}</view>
+            <van-grid column-num="2" border="{{ false }}">
+            <van-grid-item use-slot wx:for="{{category.goodsList}}" wx:key="id">
+                <image
+                src="{{item.list_pic_url}}"
+                class="category-image"
+                />
+                <text class="category-text">{{item.name}}</text>
+            </van-grid-item>
+        </van-grid>
+    </block>
+</scroll-view>

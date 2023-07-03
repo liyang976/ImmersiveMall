@@ -1,0 +1,128 @@
+<view class="goods">
+    <nav-bar navTitle="产品详情"></nav-bar>
+     <!--占位-->
+     <view class="fixTop" style="height: {{navHeight}}px"></view>
+
+    <view class="goodsMain">
+        <swiper class="goodsImg" indicator-dots="{{true}}">
+            <swiper-item wx:for="{{gallery}}" wx:key="id">
+                <image src="{{item.img_url}}" />
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <view class="service-policy">
+        <view class="item"><van-icon name="passed" />30天无忧退货</view>
+        <view class="item"><van-icon name="passed" />48小时快速退款</view>
+        <view class="item"><van-icon name="passed" />满88包邮</view>
+    </view>
+
+    <view class="goods-info">
+  
+        <view class="price">¥{{info.retail_price}}</view>
+        <view class="name">{{info.name}}</view>
+        <view class="brief">{{info.goods_brief}}</view>
+
+        <view class="attr">
+            <view class="attr-value" wx:for="{{attribute}}" wx:key="id">
+                <view class="num">{{index + 1}}</view>【{{item.name}}】{{item.value}}
+            </view>
+        </view>
+        
+        <van-cell-group>
+            <van-cell bind:click="popGoodsSpec" title="请选择产品规格" is-link />
+            <van-cell title="请选择快递地址" is-link label="明天21点前付款，预计6月26日送达" border="{{ false }}" />
+        </van-cell-group>
+
+    </view>
+
+    <view class="comment">
+        <van-cell-group>
+            <van-cell title="商品评价" value="好评率97.5%" is-link />
+        </van-cell-group>
+
+        <view class="comment-item">
+            <view class="comment-header">
+                <view class="left">
+                    <image class="avatar" src="{{comment.data.pic_list[0].pic_url}}" mode=""/>
+                </view>
+                <view class="right">
+                    <view class="user">微信用户</view>
+                    <view class="publish-time">{{comment.data.add_time}}</view>
+                </view>
+            </view>
+            <view class="comment-content">
+                {{comment.data.content}}
+            </view>
+        </view>
+    </view>
+
+    <view class="content">
+        <rich-text nodes="{{info.goods_desc}}"></rich-text>
+    </view>
+
+</view>
+<!--加入购物车-->
+<view class="buy-btn">
+    <view class="icon-item">
+        <view class="icon">
+            <van-icon name="chat-o" size="20px" />
+        </view>
+        <text>客服</text>
+    </view>
+    <view class="icon-item" bindtap="goCart">
+        <view class="icon">
+            <van-icon name="shopping-cart-o" size="20px" info="{{cartCount ? cartCount : null}}" />
+        </view>
+        <text>购物车</text>
+    </view>
+    <view class="cart-buy">
+        <view class="cart" bindtap="addCarts">加入购物车</view>
+        <view class="buy">立即购买</view>
+    </view>
+</view>
+
+<!--弹出框-->
+<van-action-sheet show="{{ show }}" z-index="{{1000}}" overlay="{{flase}}" round>
+  <view class="pop-box">
+    <view class="header">
+        <image class="prod-img" src="{{info.list_pic_url}}" mode=""/>
+        <view class="chooseInfo">
+            <view class="prod-price">¥{{currentProd.retail_price}}</view>
+            <view class="cInfo">
+                已选择: {{chooseText}}
+            </view>
+        </view>
+    </view>
+
+    <view class="chooseList">
+        <view class="chooseItem" wx:for="{{specificationList}}" wx:key="specification_id">
+            <view class="chooseTitle">{{item.name}}</view>
+            <view class="chooseBtns">
+                <van-button
+                    bindtap="chooseSpec"
+                    data-id="{{specification.id}}"
+                    data-index="{{index}}"
+                    wx:for="{{item.valueList}}"
+                    wx:for-item="specification"
+                    wx:for-index="i"
+                    wx:key="id"
+                    type="warning"
+                    size="small"
+                    plain="{{goods.isExist(currentProd.goods_specification_ids, specification.id)}}"
+                    custom-class="specBtn"
+                    >{{specification.value}}</van-button>
+            </view>
+        </view>
+    </view>
+  </view>
+</van-action-sheet>
+
+<wxs module="goods">
+    function isExist(specificationIds, specificationId) {
+        return specificationIds.indexOf(specificationId) == -1
+    }
+    module.exports = {
+        isExist: isExist
+    }
+</wxs>

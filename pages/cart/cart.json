@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+      "nav-bar": "/components/NavBar/NavBar",
+      "van-card": "@vant/weapp/card/index",
+      "van-submit-bar": "@vant/weapp/submit-bar/index",
+      "van-checkbox": "@vant/weapp/checkbox/index"
+  }
+}

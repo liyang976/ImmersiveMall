@@ -1,0 +1,72 @@
+swiper {
+    width: 750rpx;
+    height: 400rpx;
+}
+
+swiper image {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-image {
+    width: 16vw;
+    height: 16vw;
+}
+
+.icon-text {
+    font-size: 13px;
+    color: #999;
+}
+
+.shoping_title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.top-image {
+    width: 33vw;
+    height: 22vw;
+}
+
+.top-text {
+    width: 33vw;
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.new-image {
+    width: 25vw;
+    height: 25vw;
+}
+
+.new-text {
+    width: 25vw;
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.category-image {
+    width: 40vw;
+    height: 40vw;
+}
+
+.category-text {
+    width: 40vw;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main {
+    height: calc(100vh - 400rpx);
+}

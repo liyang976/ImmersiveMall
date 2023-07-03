@@ -1,0 +1,28 @@
+.goods .goods-title {
+    width: 100%;
+    text-align: center;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.goods .goods-price {
+    color: #ee3f4d;
+}
+
+/* .desction {
+    background-color: #eee;
+    padding: 10rpx;
+} */
+
+.desction .title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.desction .desc {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}

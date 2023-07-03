@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/NavBar/NavBar",
+    "van-search": "@vant/weapp/search/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index"
+  }
+}

@@ -1,0 +1,29 @@
+<view class="me">
+    <nav-bar navTitle="个人中心"></nav-bar>
+    <!--占位-->
+    <view class="fixTop" style="height: {{navHeight}}px"></view>
+
+    <view class="user-profile">
+        <image src="/assets/avatar.jpeg" mode=""/>
+        <view class="info">
+            <button class="login" size="mini" style="font-weight: 400">点击登录</button>
+        </view>
+    </view>
+
+    <view class="icon-list">
+        <view class="list-title">个人历史</view>
+        <van-cell-group inset>
+            <van-cell title="我的订单" icon="gem-o" value="查看购买商品" is-link />
+            <van-cell title="优惠券" icon="coupon-o" value="享受超值优惠" is-link />
+            <van-cell title="我的收藏" icon="shop-collect-o" value="享受超值优惠" is-link />
+        </van-cell-group>
+
+        <view class="list-title">商城服务</view>
+        <van-cell-group inset>
+            <van-cell title="会员福利" icon="comment-o" value="享受VIP服务" is-link />
+            <van-cell title="地址管理" icon="location-o" value="管理快递地址" is-link />
+            <van-cell title="联系客服" icon="contact" value="有问题找客服" is-link />
+        </van-cell-group>
+    </view>
+
+</view>

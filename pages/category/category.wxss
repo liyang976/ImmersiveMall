@@ -1,0 +1,39 @@
+.cateMain {
+    width: 750rpx;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.treeSelect {
+    width: 750rpx;
+    flex: 1;
+}
+
+.content .banner {
+   height: 200rpx;
+}
+
+.content .desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 200rpx;
+    text-align: center;
+    color: #fff;
+    font-weight: boldx;
+}
+
+.content .content-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    padding: 12rpx 10rpx;
+}
+
+.van-grid-item__text text {
+    width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

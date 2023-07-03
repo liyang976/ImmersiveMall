@@ -1,0 +1,9 @@
+<view class="navbar-custom-class" style="height: {{navHeight}}px; background-color: {{bgColor}}">
+    <view class="navbar-title" style="height: {{navTitleHeight}}px; line-height: {{navTitleHeight}}px">
+        <view class="navbar-btn" wx:if="{{isShow}}">
+            <van-icon name="revoke" size="35rpx" bindtap="goBack" /> | 
+            <van-icon name="home-o" size="35rpx" bindtap="goHome" />
+        </view>
+        {{navTitle}}
+    </view>
+</view>
